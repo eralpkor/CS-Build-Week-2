@@ -16,13 +16,13 @@
 // Output: true
 
 const containsDuplicate = (nums) => {
-  // return false for empty array
+  // return false for empty and single value array
   if (nums.length <= 1) return false
   // sort the given array
-  nums.sort();
+  nums.sort(); // O(n log n) time complexity. O(1) space complexity
 
   // loop through the sorted array and return first found duplicate
-  for (let i = 0; i < nums.length - 1; i++) {
+  for (let i = 0; i < nums.length - 1; i++) { // O(n) time complexity
     if (nums[i] === nums[i + 1]) {
       return true;
     }
